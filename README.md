@@ -24,7 +24,7 @@ This backend ensures scalability, performance, and reliability by leveraging MyS
 
 <!-- Readme links -->
 [php_badge]: https://img.shields.io/badge/PHP-8.4-8892BF?logo=php&logoColor=white&style=for-the-badge
-[laravel_badge]: https://img.shields.io/badge/Laravel-12.0.0-FF2D20?logo=laravel&logoColor=white&style=for-the-badge
+[laravel_badge]: https://img.shields.io/badge/Laravel-12.0-FF2D20?logo=laravel&logoColor=white&style=for-the-badge
 [eloquent_badge]: https://img.shields.io/badge/Eloquent%20ORM-12.0-84CB28?logo=laravel&logoColor=white&style=for-the-badge
 [mysql_badge]: https://img.shields.io/badge/MySQL-9.4.0-4479A1?logo=mysql&logoColor=white&style=for-the-badge
 [docker_badge]: https://img.shields.io/badge/Docker-27%20(latest)-2496ED?logo=docker&logoColor=white&style=for-the-badge
