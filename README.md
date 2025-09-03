@@ -19,6 +19,14 @@ This backend ensures scalability, performance, and reliability by leveraging MyS
 
 </div>
 
+---
+
+## 📜 License
+
+This project is licensed under **All Rights Reserved**.  
+The source code is provided for viewing purposes only.  
+See the [LICENSE](LICENSE) file for more details.
+
 <!-- Author -->
 [author]: https://github.com/rolando-r
 
