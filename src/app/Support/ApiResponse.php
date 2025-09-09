@@ -8,7 +8,7 @@ class ApiResponse
     {
         $codes = self::codes();
         $code = $codes[$key]['code'] ?? 0;
-        $message = $codes[$key]['message'] ?? 'Operación exitosa';
+        $message = $codes[$key]['message'] ?? 'Success';
 
         return response()->json([
             'success' => true,
@@ -22,7 +22,7 @@ class ApiResponse
     {
         $codes = self::codes();
         $code = $codes[$key]['code'] ?? 0;
-        $message = $codes[$key]['message'] ?? 'Ha ocurrido un error';
+        $message = $codes[$key]['message'] ?? 'Oops! Something went wrong';
 
         return response()->json([
             'success' => false,

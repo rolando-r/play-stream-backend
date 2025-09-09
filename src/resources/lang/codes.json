@@ -1,0 +1,14 @@
+{
+  "VALIDATION_ERROR": {
+    "code": 1001,
+    "message": "The submitted data is not valid"
+  },
+  "DATABASE_ERROR": {
+    "code": 2001,
+    "message": "Database error"
+  },
+  "USER_CREATED": {
+    "code": 3001,
+    "message": "User successfully registered"
+  }
+}

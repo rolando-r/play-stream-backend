@@ -1,3 +1,5 @@
+# Laravel
+
 *.log
 .DS_Store
 .env
