@@ -6,8 +6,6 @@ services:
     restart: always
     volumes:
       - ./src:/var/www/html
-    depends_on:
-      - mysql
 
   nginx:
     image: nginx:alpine
@@ -20,7 +18,7 @@ services:
     depends_on:
       - app
 
-  mysql:
+  db_mysql:
     image: mysql:9.4.0
     restart: always
     environment:
