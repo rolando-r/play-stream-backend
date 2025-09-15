@@ -13,14 +13,14 @@ class RegisterController extends Controller
     public function register(RegisterRequest $request)
     {
         try {
-            $user = User::create([
-                'name'     => $request->name,
-                'email'    => $request->email,
-                'password' => Hash::make($request->password),
-            ]);
+            $data = $request->only(['name', 'email', 'password']);
+
+            $data['password'] = Hash::make($data['password']);
+
+            $user = User::create($data);
 
             return ApiResponse::success('USER_REGISTERED', [
-                'user' => $user,
+                'user' => $user->only(['id', 'name', 'email']),
             ], 201);
         } catch (\Throwable $th) {
             return ApiResponse::error('USER_REGISTRATION_FAILED', [
