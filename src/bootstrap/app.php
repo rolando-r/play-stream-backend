@@ -6,6 +6,7 @@ use Illuminate\Foundation\Configuration\Middleware;
 use Illuminate\Database\QueryException;
 use App\Support\ApiResponse;
 use Illuminate\Validation\ValidationException;
+use Illuminate\Http\Exceptions\ThrottleRequestsException;
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
@@ -43,6 +44,15 @@ return Application::configure(basePath: dirname(__DIR__))
                     $e->errors(),
                     422
                 );
+            }
+        });
+
+        // Throttle Exception (rate limit)
+        $exceptions->render(function (ThrottleRequestsException $e, $request) {
+            if ($request->expectsJson()) {
+                return ApiResponse::error('TOO_MANY_REQUESTS', [
+                    'exception' => $e->getMessage(),
+                ], 429);
             }
         });
 
