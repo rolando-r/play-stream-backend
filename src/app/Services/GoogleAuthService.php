@@ -23,6 +23,7 @@ class GoogleAuthService
             [
                 'name'     => $payload['name'],
                 'password' => bcrypt(str()->random(16)),
+                'email_verified_at' => now(), // Mark email as verified
             ]
         );
 
